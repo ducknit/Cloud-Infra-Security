@@ -76,3 +76,56 @@ Understanding MAC addressing and ARP protocols allows organizations to:
 - Operates at **Layer 2 (Data Link Layer)** of the OSI model.
 
 **Example:**  
+
+MAC: 00:0A:95:9D:68:16
+OUI: 00:0A:95 (assigned to Apple Inc.)
+
+
+
+## ARP (Address Resolution Protocol)
+
+**Purpose:**  
+- Resolves IPv4 addresses to MAC addresses.
+
+**How it Works:**  
+1. Host sends an **ARP Request** (broadcast) asking “Who has IP 192.168.1.10?”  
+2. Device with that IP replies with an **ARP Reply** including its MAC address.  
+3. The mapping is stored in an **ARP cache** for future use.
+
+**Security Consideration:**  
+- Vulnerable to ARP spoofing unless mitigated with security tools.
+
+## RARP (Reverse Address Resolution Protocol)
+
+**Purpose:**  
+- Resolves MAC addresses to IP addresses (reverse of ARP).  
+
+**Use Case:**  
+- Legacy diskless systems that know only their MAC address used RARP to obtain an IP address.
+
+**Obsolescence:**  
+- Superseded by **BOOTP** and **DHCP**, which offer dynamic and richer configuration.
+
+## Differences Between ARP and RARP
+
+| Feature        | ARP                                | RARP                               |
+|----------------|-------------------------------------|-------------------------------------|
+| Function       | IP → MAC                           | MAC → IP                           |
+| Direction      | Forward resolution                  | Reverse resolution                  |
+| Usage Today    | Actively used in IPv4 networks      | Largely obsolete                    |
+| Alternative    | N/A                                 | Replaced by DHCP/BOOTP             |
+
+## Security Considerations
+
+● **ARP Spoofing**: Attackers can impersonate IP-MAC mappings to intercept traffic.  
+● **Solution**: Enable **Dynamic ARP Inspection (DAI)** on switches, use static ARP tables.  
+● **MAC Filtering**: Used in Wi-Fi for basic access control, though not highly secure.  
+
+## Conclusions
+
+⬤ MAC addressing and ARP remain vital components of modern IPv4 networks.  
+⬤ While RARP is outdated, understanding its function provides historical context.  
+⬤ ARP resolution is automatic but can be exploited if not secured.  
+⬤ Effective IP-MAC mapping helps maintain robust, secure, and efficient communication across network layers.  
+⬤ Network engineers should be equipped to monitor, secure, and troubleshoot these foundational protocols.
+
