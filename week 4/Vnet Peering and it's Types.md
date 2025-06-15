@@ -25,6 +25,23 @@ This document guides you through:
 - Basic understanding of **networking concepts**
 
 ---
+## 2️⃣ VNet Peering
+
+**VNet Peering** lets you connect two Azure VNets directly — allowing resources in different VNets to communicate with low latency and high bandwidth — without needing a VPN or Gateway.
+
+---
+
+## Types of Peering:
+
+✅ **Regional VNet Peering (same region)**  
+- Connects two VNets in the **same Azure region**.  
+- Lower latency, cheaper, and faster.
+
+✅ **Global VNet Peering (different regions)**  
+- Allows VNets in **different Azure regions** to connect directly.  
+- Enables multiregion architectures.
+
+---
 
 ## 1️⃣ Create VNet1 in Southeast Asia
 
