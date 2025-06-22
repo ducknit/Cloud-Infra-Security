@@ -52,7 +52,6 @@ This document explores the core Azure networking components essential for managi
 - Simplifies rule management.
 
 Example:
-```json
 Source: WebServerASG
 Destination: DBASG
 Port: 1433
